@@ -51,6 +51,7 @@ Animation:
 
 
 Curve
+
 	spring
 	linear
 	easeIn
