@@ -21,7 +21,7 @@ class MasterTBVC: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? CustomCell
-        cell?.nameAnimation.text = animationList[indexPath.row]
+        cell?.nameAnimation.text = "\(indexPath.row+1). \(animationList[indexPath.row])"
         return cell!
     }
     
@@ -30,8 +30,8 @@ class MasterTBVC: UITableViewController {
         
         let v2 = self.storyboard?.instantiateViewControllerWithIdentifier("Detail") as! DetailVC
         self.navigationController?.pushViewController(v2, animated: true)
-//        print(animationList[indexPath.row])
         v2.nameAnimate = animationList[indexPath.row]
+        v2.animationList = animationList
         
     }
 }
