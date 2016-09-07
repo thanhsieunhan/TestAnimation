@@ -1,23 +1,26 @@
 # TestAnimation
 
 Sử dụng
+
 	layer.animation = "squeezeDown" // tên hiệu ứng 
 	layer.animate() // cho nó hoạt động
 
 Chuỗi Animations
+
 	layer.y = -50
 	animateToNext {
 	  layer.animation = "fall"
 	  layer.animateTo()
 	}
 
-Functions:
+Functions
+
 	animate()
 	animateNext { ... }
 	animateTo()
 	animateToNext { ... }
 
-Animation
+Animation:
 
 	shake
 	pop
@@ -70,12 +73,14 @@ Properties
 	* Not all properties work together. Play with the demo app.
 
 Autostart
+
 	Cho phép animate mà không cần code.
 	Không cần sử dụng nó nếu bạn có kế hoạch cho animation của bạn.
 
 Autohide
+
 	Tiết kiệm 1 dòng  "layer.alpha = 0" trong viewDidLoad().
 
 Known issue
 
-Animations won't autostart when view is reached via performSegueWithIdentifier.
+	Animations won't autostart when view is reached via performSegueWithIdentifier.
